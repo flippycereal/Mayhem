@@ -1,8 +1,8 @@
 package brodiebroadcasts.mayhem;
 
+import brodiebroadcasts.mayhem.init.ModEntities;
 import brodiebroadcasts.mayhem.init.ModItems;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +21,6 @@ public class Mayhem implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.initialize();
+		ModEntities.initialize();
 	}
 }
