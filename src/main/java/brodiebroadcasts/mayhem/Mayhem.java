@@ -1,5 +1,6 @@
 package brodiebroadcasts.mayhem;
 
+import brodiebroadcasts.mayhem.init.ModEntities;
 import brodiebroadcasts.mayhem.init.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,11 +16,9 @@ public class Mayhem implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-
-
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.initialize();
+		ModEntities.initialize();
 	}
 }

@@ -13,7 +13,16 @@ import net.minecraft.util.Identifier;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import static brodiebroadcasts.mayhem.Mayhem.MOD_ID;
+
 public interface ModEntities {
-    EntityType<ThornSlashEntity> THORN_SLASH = (FabricEntityTypeBuilder.<ThornSlashEntity>create(SpawnGroup.MISC,
-            ThornSlashEntity::new).disableSaving().dimensions(EntityDimensions.changing(5.0F, 0.2F)).build());
+    EntityType<ThornSlashEntity> THORN_SLASH = (FabricEntityTypeBuilder.<ThornSlashEntity>create(SpawnGroup.MISC)).build();
+    public class ModEntity {
+        public static final EntityType<ThornSlashEntity> THORN_SLASH = (FabricEntityTypeBuilder.<ThornSlashEntity>create(SpawnGroup.MISC,
+                ThornSlashEntity::new).disableSaving().dimensions(EntityDimensions.changing(5.0F, 0.2F)).build());
+
+    }
+    public static void initialize() {
+        Registry.register(Registries.ENTITY_TYPE, new Identifier(MOD_ID, "thorn_slash"), THORN_SLASH);
+    }
 }

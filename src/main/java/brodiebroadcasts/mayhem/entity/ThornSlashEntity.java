@@ -33,6 +33,7 @@ public class ThornSlashEntity extends PersistentProjectileEntity{
         return ItemStack.EMPTY;
     }
 
+    @Override
     public void tick() {
         super.tick();
 
@@ -71,4 +72,6 @@ public class ThornSlashEntity extends PersistentProjectileEntity{
     protected SoundEvent getHitSound() {
         return SoundEvents.BLOCK_BAMBOO_BREAK;
     }
+
+
 }

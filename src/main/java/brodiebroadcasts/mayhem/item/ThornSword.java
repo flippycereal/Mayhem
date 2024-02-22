@@ -33,7 +33,7 @@ public class ThornSword extends SwordItem {
         ItemStack itemStack = user.getStackInHand(hand);
         float f = 1.0F;
         if (!world.isClient) { // Ensure method is running on the server
-            user.getItemCooldownManager().set(this, 120); // 6 second cool down
+            user.getItemCooldownManager().set(this, 10); // 6 second cool down
 
             ThornSlashEntity slashEntity = new ThornSlashEntity(world, user);
             slashEntity.setOwner(user);
