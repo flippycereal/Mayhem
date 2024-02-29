@@ -1,5 +1,6 @@
 package brodiebroadcasts.mayhem;
 
+import brodiebroadcasts.mayhem.init.ModEnchantments;
 import brodiebroadcasts.mayhem.init.ModEntities;
 import brodiebroadcasts.mayhem.init.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -20,5 +21,6 @@ public class Mayhem implements ModInitializer {
 
 		ModItems.initialize();
 		ModEntities.initialize();
+		ModEnchantments.initialize();
 	}
 }

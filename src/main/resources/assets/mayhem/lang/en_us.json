@@ -1,4 +1,10 @@
 {
   "item.mayhem.thorn_sword" : "Thorn Sword",
+  "item.mayhem.angelic_blade" : "Angelic Blade",
+
+  "enchantment.mayhem.angelic_dash" : "Angelic Dash",
+  "enchantment.mayhem.angelic_fire" : "Angelic Flames",
+
+
   "itemGroup.mayhem" : "Mayhem"
 }

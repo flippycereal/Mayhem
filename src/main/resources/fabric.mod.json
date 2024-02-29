@@ -18,6 +18,9 @@
 		"main": [
 			"brodiebroadcasts.mayhem.Mayhem"
 		],
+		"client": [
+			"brodiebroadcasts.mayhem.MayhemClient"
+		],
 		"fabric-datagen": [
 			"brodiebroadcasts.mayhem.MayhemDataGenerator"
 		]

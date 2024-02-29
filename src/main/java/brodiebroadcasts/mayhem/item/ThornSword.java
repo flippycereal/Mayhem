@@ -1,6 +1,5 @@
 package brodiebroadcasts.mayhem.item;
 
-import brodiebroadcasts.mayhem.entity.ThornSlashEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -26,21 +25,5 @@ public class ThornSword extends SwordItem {
                     100, 1, true, false, false)); // Adds the status effect poison to the entity hit for 5 seconds
         }
         return super.postHit(stack, target, attacker);
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
-        float f = 1.0F;
-        if (!world.isClient) { // Ensure method is running on the server
-            user.getItemCooldownManager().set(this, 10); // 6 second cool down
-
-            ThornSlashEntity slashEntity = new ThornSlashEntity(world, user);
-            slashEntity.setOwner(user);
-            slashEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, f * 3.0F, 1.0F);
-            slashEntity.setDamage(slashEntity.getDamage());
-        }
-
-        return super.use(world, user, hand);
     }
 }
